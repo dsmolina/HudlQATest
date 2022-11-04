@@ -4,6 +4,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 
+correct_user = "enter correct email here"
+correct_pass = "enter correct password here"
+
 # setUp
 url = "http://www.hudl.com/login"
 chromepath = r"C:\chromedriver.exe"
@@ -18,8 +21,8 @@ def reset():
 
 def test_login():  # successful login
     reset()
-    user = "enter your correct email here"
-    passw = "enter your correct password here"
+    user = correct_user
+    passw = correct_pass
     username = driver.find_element("name", "email")
     username.clear()
     username.send_keys(user)
@@ -84,8 +87,8 @@ def test_hudl_logo():  # Hudl logo
 
 def test_login_using_keys():  # login with tab and enter
     reset()
-    user = "enter your correct email here"
-    passw = "enter your correct password here"
+    user = correct_user
+    passw = correct_pass
     driver.find_element("name", "email").send_keys(user + Keys.TAB + passw + Keys.ENTER)
     time.sleep(3)
     assert driver.current_url == 'https://www.hudl.com/home'
@@ -93,8 +96,8 @@ def test_login_using_keys():  # login with tab and enter
 
 def test_login_remember_me():  # login with remember me
     reset()
-    user = "enter your correct email here"
-    passw = "enter your correct password here"
+    user = correct_user
+    passw = correct_pass
     username = driver.find_element("name", "email")
     username.clear()
     username.send_keys(user)
@@ -109,7 +112,7 @@ def test_login_remember_me():  # login with remember me
 
 def test_login_wrong_password():  # wrong password
     reset()
-    user = "enter your correct email here"
+    user = correct_user
     passw = "wrongpassword"
     username = driver.find_element("name", "email")
     username.clear()
@@ -139,7 +142,7 @@ def test_login_no_username():  # no username
 
 def test_login_no_password():  # no password
     reset()
-    user = "enter your correct email here"
+    user = correct_user
     username = driver.find_element("name", "email")
     username.clear()
     username.send_keys(user)
