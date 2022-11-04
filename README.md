@@ -24,5 +24,6 @@
 1. Enter your correct login credentials as specified at lines 21, 22, 87, 88, 96, 97, 112, 142
 2. Run the tests with:
 > pytest test.py
+3. When it finishes running, it will state which tests passed (worked as expected) and which ones failed (did not work as expected).
 
 I have also attached a zipped screen recording of the code running with pytest
