@@ -21,9 +21,16 @@
 13. No username or password
 
 ## To test the program using pytest: 
+0. Install Python and Selenium. Make sure the ChromeDriver executable is available in the $PATH variable.
 1. Enter your correct login credentials as specified at lines 21, 22, 87, 88, 96, 97, 112, 142
 2. Run the tests with:
 > pytest test.py
 3. When it finishes running, it will state which tests passed (worked as expected) and which ones failed (did not work as expected).
 
-I have also attached a zipped screen recording of the code running with pytest
+## Notes
+I have attached a zipped screen recording of the code running with pytest.
+
+I developed and ran this program in the following environment:
+- Python 3.9.13
+- Selenium 4.6.0
+- ChromeDriver 107.0.5304.62
