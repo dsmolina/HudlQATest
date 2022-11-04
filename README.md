@@ -24,3 +24,5 @@
 1. Enter your correct login credentials as specified at lines 21, 22, 87, 88, 96, 97, 112, 142
 2. Run the tests with:
 > pytest test.py
+
+I have also attached a zipped screen recording of the code running with pytest
